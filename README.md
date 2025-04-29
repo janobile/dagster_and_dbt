@@ -1,20 +1,45 @@
 # Dagster and dbt
 
-## Overview
 
-In this course, you'll learn how to integrate and orchestrate dbt projects with Dagster. You'll load dbt models into Dagster as assets, build dependencies, and ready your project for production deployment.
+# Set up local
 
-## Completed code
+- **To install git.** Refer to the [Git documentation](https://github.com/git-guides/install-git) if you don’t have this installed.
+- **To have Python installed.**  Dagster supports Python 3.9 - 3.12.
 
-If you are stuck you can reference the completed code for each lesson.
+---
 
+## Clone the project
+
+```bash
+git clone git@github.com:janobile/dagster_and_dbt.git
 ```
-dagster_and_dbt
-├── completed
-│   ├── lesson_3
-│   ├── lesson_4
-│   ├── lesson_5
-│   └── lesson_6
+
+## Install the dependencies
+
+Create the virtual environment.
+
+```bash
+python3 -m venv .venv
+```
+
+Enter the virtual environment.
+
+```bash
+source .venv/bin/activate
+```
+
+Install the packages.
+
+```bash
+pip install -e ".[dev]"
+```
+
+## Create .env file
+
+You will want to make a copy of the example file `.env.example` which will be used later on.
+
+```bash
+cp .env.example .env
 ```
 
 ## Dagster UI
@@ -26,13 +51,3 @@ dagster dev
 ```
 
 Open http://localhost:3000 with your browser to see the project.
-
-> [!NOTE]
-> Running `dagster dev` will put you in the starter Dagster project. To see any of the completed lessons execute.
-> `dagster dev -m dagster_and_dbt.completed.lesson_{LESSON NUMBER}.definitions`
-
-## Deploy on Dagster Cloud
-
-The easiest way to deploy your Dagster project is to use Dagster Cloud.
-
-Check out the [Dagster Cloud Documentation](https://docs.dagster.cloud) to learn more. 
