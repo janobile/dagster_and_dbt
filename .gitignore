@@ -175,12 +175,6 @@ tmp*/
 *.geojson
 *.parquet
 
-**/data/outputs/*.csv
-**/data/outputs/*.png
-**/data/raw/*
-**/data/requests/*.json
-**/data/staging/*
-
 .ruff_cache
 
 # dbt
